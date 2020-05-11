@@ -15,6 +15,12 @@
             <button v-on:click="setMessageToDefault">Set default</button>
             <br><br>
             <button v-on:click="setMessageToReverse">Reverse</button>
+            <br><br>
+            <button v-on:click="setMessageToReverse">new test button 1</button>
+            <br><br>
+            <button v-on:click="setMessageToReverse">new test button 2</button>
+            <br><br>
+            <button v-on:click="setMessageToReverse">new test button 3</button>
             <h1>{{ message }}</h1>
             
             <ul v-for="(value, name) in product">
@@ -51,7 +57,19 @@
                     },
                     setMessageToReverse: function(){
                         this.message = this.message.split('').reverse().join('')
-                    }
+                    },
+                    MessageEdit: function(){
+                        this.message = this.message.split('').edit().join('')
+                    },
+                    MessageDelete: function(){
+                        this.message = this.message.split('').delete().join('')
+                    },
+                    setMessageToBreak: function(){
+                        this.message = this.message.split('').break().join('')
+                    },
+                    MessageClone: function(){
+                        this.message = this.message.split('').clone().join('')
+                    },
                 }
             })
         </script>
